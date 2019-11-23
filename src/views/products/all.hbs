@@ -1,0 +1,42 @@
+<form action="/products/comment/new" method="POST">
+
+<div class="row">
+    {{#each products}}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header row">
+                    <h4>{{name}}</h4>
+                    <input type="checkbox" name="product" value="{{id}}" class="form-control ">
+                </div>
+                <div class="card-body">
+                    <p>{{description}}</p>
+                    <p>${{price}}</p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+<div class="text-center p-4"></div>
+
+{{#if user}}
+
+<div class="form-group">
+    <label for="title">Título</label>
+    <input type="text" name="title" class="form-control" placeholder="Título (opcional)">
+</div>
+<div class="form-group">
+    <label for="description">Descripción</label>
+    <textarea name="description" class="form-control" rows="3" required></textarea>
+</div>
+<center>
+    <button type="submit" class="btn btn-primary ">Comentar</button>
+</center>
+{{else}}
+
+<a href="/user/login" class="btn btn-primary">Inicie sesión para comentar</a>
+<a href="/user/signup" class="btn btn-primary">Registrarse y comentar</a>
+
+{{/if}}
+
+</div>
+</form>

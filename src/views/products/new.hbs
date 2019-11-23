@@ -1,0 +1,45 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Nuevo producto</h3>
+        </div>
+        <div class="card-body">
+            <form action="/products/new/check" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Nombre"
+                        required
+                        autofocus/>
+            
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <textarea
+                        class="form-control"
+                        name="description"
+                        placeholder="Descripción (opcional)"></textarea>
+            
+                </div>
+                <div class="form-group">
+                    <label for="price">Precio</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        name="price"
+                        placeholder="Precio"
+                        min="0"
+                        step="0.01"
+                        required/>
+            
+                </div>
+                <center>
+                    <button type="submit" class="btn btn-primary ">Añadir</button>
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
